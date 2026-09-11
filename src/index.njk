@@ -5,6 +5,16 @@ section: about
 <div class="about-layout wrap">
   <aside class="portrait">
     <img src="/assets/jaime.jpg" alt="Jaime de la Torre de Ysasi-Ysasmendi" width="1999" height="2999" fetchpriority="high">
+    <ul class="hobbies" aria-label="Outside work">
+      {% for hobby in hobbies %}
+      <li>
+        <span class="hobby" tabindex="0" role="img" aria-label="{{ hobby.label }}">
+          {% include "icons/" + hobby.icon + ".svg" %}
+          <span class="hobby-label" aria-hidden="true">{{ hobby.label }}</span>
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
   </aside>
   <section class="experience" aria-label="Experience">
     <h1 class="visually-hidden">{{ site.name }}</h1>

@@ -1,0 +1,42 @@
+[
+  {
+    "label": "Sailing",
+    "icon": "sailboat"
+  },
+  {
+    "label": "Cooking",
+    "icon": "chef-hat"
+  },
+  {
+    "label": "DJing",
+    "icon": "vinyl"
+  },
+  {
+    "label": "Reading",
+    "icon": "book"
+  },
+  {
+    "label": "Cinema",
+    "icon": "movie"
+  },
+  {
+    "label": "Padel",
+    "icon": "padel"
+  },
+  {
+    "label": "Gaming",
+    "icon": "device-gamepad-2"
+  },
+  {
+    "label": "Kitesurfing",
+    "icon": "kitesurf"
+  },
+  {
+    "label": "Scuba diving",
+    "icon": "scuba-mask"
+  },
+  {
+    "label": "Watch collecting",
+    "icon": "device-watch"
+  }
+]

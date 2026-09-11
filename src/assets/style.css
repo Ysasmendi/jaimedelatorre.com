@@ -19,7 +19,7 @@ h1, h2 { font-weight: 500; letter-spacing: -.035em; }
 .wrap { width: min(1110px, calc(100% - 112px)); margin-inline: auto; }
 .site-header { min-height: 112px; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: clamp(32px, 5vw, 72px); border-bottom: 1px solid #becbe0; }
 .site-header.wrap { width: 100%; margin: 0; padding-left: 24px; padding-right: max(36px, (100vw - 1110px) / 2); font-family: D-DIN, 'Arial Narrow', sans-serif; }
-.wordmark { justify-self: start; font-size: 25px; line-height: 1.2; font-weight: 700; letter-spacing: .015em; white-space: nowrap; text-transform: uppercase; }
+.wordmark { justify-self: start; font-size: 25px; line-height: 1.2; font-weight: 700; letter-spacing: .065em; white-space: nowrap; text-transform: uppercase; }
 .site-header nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); font-size: 11px; color: var(--muted); }
 .site-header nav a { position: relative; display: grid; place-items: center; min-height: 44px; padding: 8px 12px; white-space: nowrap; text-transform: uppercase; letter-spacing: .18em; }
 .site-header nav a + a::before { content: ''; position: absolute; left: 0; top: 14px; bottom: 14px; width: 1px; background: #becbe0; }

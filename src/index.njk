@@ -12,7 +12,7 @@ section: about
       {% for job in career %}
       <li class="career-item">
         <div class="career-heading"><h2>{{ job.company }}</h2><span class="career-date">{{ job.dates }}</span></div>
-        <p>{{ job.description }}</p>
+        {% if job.description %}<p>{{ job.description }}</p>{% endif %}
       </li>
       {% endfor %}
     </ol>

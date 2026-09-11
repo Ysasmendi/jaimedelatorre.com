@@ -1,11 +1,47 @@
 [
-  {"company":"Dcycle","role":"Advisor","dates":"2025 — hoy","description":"Estrategia, organización e inteligencia artificial aplicada al negocio."},
-  {"company":"Reby","role":"COO","dates":"2020 — 2024","description":"Dirección del negocio y de las operaciones de movilidad compartida en España e Italia. Expansión, equipos y M&A."},
-  {"company":"Badi","role":"VP of Homes","dates":"2019 — 2020","description":"Creación y lanzamiento de una nueva vertical de negocio, desde el producto y el equipo hasta su operación."},
-  {"company":"Hostmaker","role":"General Manager · España y Portugal","dates":"2016 — 2019","description":"Dirección de los mercados de España y Portugal. Crecimiento, operaciones y rentabilidad."},
-  {"company":"Airbnb","role":"Regional Market Manager · España","dates":"2014 — 2016","description":"Desarrollo del mercado español, alianzas estratégicas y construcción de equipos internacionales."},
-  {"company":"Fever","role":"COO · Primer empleado","dates":"2013 — 2014","description":"Del inicio a la expansión internacional. Equipo, operaciones y lanzamiento en nuevos mercados."},
-  {"company":"Banco Interamericano de Desarrollo","role":"Venture Capital","dates":"2012 — 2013","description":"Washington, D. C."},
-  {"company":"Amazon","role":"Project Manager · Lanzamiento de Amazon.es","dates":"2011 — 2012","description":"Parte del equipo que lanzó Amazon en España, desde Luxemburgo."},
-  {"company":"Grupo Vips","role":"Product Manager","dates":"2009 — 2011","description":"Madrid."}
+  {
+    "company": "Dcycle",
+    "dates": "2025 — Now",
+    "description": "Advisor. Strategy, operations and applied AI."
+  },
+  {
+    "company": "Reby",
+    "dates": "2020 — 2024",
+    "description": "COO. Led shared mobility operations across Spain and Italy."
+  },
+  {
+    "company": "Badi",
+    "dates": "2019 — 2020",
+    "description": "VP of Homes. Built and launched a new property management business."
+  },
+  {
+    "company": "Hostmaker",
+    "dates": "2016 — 2019",
+    "description": "General Manager. Led the business in Spain and Portugal."
+  },
+  {
+    "company": "Airbnb",
+    "dates": "2014 — 2016",
+    "description": "Regional Market Manager. Grew the Spanish market."
+  },
+  {
+    "company": "Fever",
+    "dates": "2013 — 2014",
+    "description": "First employee and COO. Built the team and launched new markets."
+  },
+  {
+    "company": "Inter-American Development Bank",
+    "dates": "2012 — 2013",
+    "description": "Worked in venture capital in Washington, DC."
+  },
+  {
+    "company": "Amazon",
+    "dates": "2011 — 2012",
+    "description": "Project Manager. Part of the team that launched Amazon.es."
+  },
+  {
+    "company": "Grupo Vips",
+    "dates": "2009 — 2011",
+    "description": "Product Manager in Madrid."
+  }
 ]

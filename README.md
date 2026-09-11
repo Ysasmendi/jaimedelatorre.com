@@ -1,54 +1,47 @@
 # jaimedelatorre.com
 
-Web personal de Jaime de la Torre. Portada, trayectoria, especialidades, blog y contacto. HTML estático generado con Eleventy y publicado en GitHub Pages.
+Personal website for Jaime de la Torre. Built with Eleventy and prepared for GitHub Pages.
 
-## Publicar un artículo
+## Content
 
-En GitHub, crea un archivo dentro de `src/posts/`, por ejemplo `mi-primer-articulo.md`:
+- `src/_data/career.json`: companies, years and one-line descriptions.
+- `src/_data/site.json`: email, social links and metadata.
+- `src/index.njk`: portrait and experience.
+- `src/blog.njk`: blog index.
+- `src/contact.njk`: email and social links.
+- `src/assets/style.css`: layout and typography.
+
+## Publish a post
+
+Create `src/posts/my-first-post.md`:
 
 ```markdown
 ---
-title: "Título del artículo"
-description: "Una frase que resume el contenido."
+title: "Post title"
+description: "A short description."
 date: 2026-09-11
 draft: false
 ---
 
-Aquí empieza el artículo, escrito en Markdown.
-
-## Un apartado
-
-Texto, **negritas**, enlaces y listas.
+Write the article in Markdown.
 ```
 
-Al guardar en `main`, GitHub Actions construye y publica la web. El artículo aparece en `/blog/mi-primer-articulo/`, en el listado del blog y entre las tres últimas entradas de la portada. `draft: true` impide generar una página pública y la excluye de listados y sitemap. Los artículos con fecha futura también se excluyen; se publican en la primera compilación posterior a su fecha (el paso del tiempo por sí solo no ejecuta una compilación).
+Saving to `main` triggers the build. Published posts appear in the blog, at `/blog/my-first-post/`, and in the sitemap. `draft: true` and future dates exclude posts from the generated website. Future posts need a new build after their publication date. If the repository becomes public, draft source files are also public; do not commit confidential content.
 
-El repositorio podría ser público: no guardes borradores confidenciales ni datos privados en Git, aunque no se publiquen en la web.
-
-## Editar contenido
-
-- Portada y especialidades: `src/index.njk`.
-- Trayectoria: `src/_data/career.json`.
-- Correo y redes: `src/_data/site.json`.
-- Estilos: `src/assets/style.css`.
-- Plantilla de artículos: `src/_includes/article.njk`.
-
-## Desarrollo local
+## Local preview
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Vista previa: http://localhost:8080. `npm run build` genera `_site/`.
+Open http://localhost:8080. `npm run build` generates `_site/`.
 
-## Publicación y dominio
+## Hosting
 
-GitHub Pages usa el workflow `.github/workflows/pages.yml`, con dominio personalizado `jaimedelatorre.com`.
+GitHub Pages uses `.github/workflows/pages.yml`. The custom domain is `jaimedelatorre.com`. Pages must be enabled and DNS configured before the website is live.
 
-Registros DNS web en Squarespace:
-
-| Host | Tipo | Valor |
+| Host | Type | Value |
 | --- | --- | --- |
 | @ | A | 185.199.108.153 |
 | @ | A | 185.199.109.153 |
@@ -56,8 +49,6 @@ Registros DNS web en Squarespace:
 | @ | A | 185.199.111.153 |
 | www | CNAME | ysasmendi.github.io |
 
-El buzón `contact@jaimedelatorre.com` se configura por separado en el proveedor de correo. La web solo enlaza mediante `mailto:`.
+The `contact@jaimedelatorre.com` mailbox is configured separately. The site uses a `mailto:` link.
 
-## Tipografía y fotografía
-
-Inter se sirve desde esta web bajo la SIL Open Font License incluida en `src/assets/fonts/LICENSE.txt`. Retrato proporcionado por Jaime de la Torre. No se usan scripts de seguimiento, cookies propias ni recursos de terceros en tiempo de ejecución.
+Inter is self-hosted under the included SIL Open Font License. Portrait supplied by Jaime de la Torre. No analytics, tracking scripts or third-party runtime requests.

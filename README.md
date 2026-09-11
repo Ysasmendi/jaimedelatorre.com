@@ -28,6 +28,8 @@ Write the article in Markdown.
 
 Saving to `main` triggers the build. Published posts appear in the blog, at `/blog/my-first-post/`, and in the sitemap. `draft: true` and future dates exclude posts from the generated website. Future posts need a new build after their publication date. If the repository becomes public, draft source files are also public; do not commit confidential content.
 
+The five LinkedIn articles imported in September 2026 are HTML posts under `src/posts/`, preserving the original text, formatting, language and publication date. Their images are hosted locally under `src/assets/posts/`. Each article links to its original through `sourceUrl`; `lang`, `cover`, `coverAlt` and optional `coverCaption` control article presentation. Raw LinkedIn page exports are not included in the repository.
+
 ## Local preview
 
 ```sh

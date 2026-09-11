@@ -5,6 +5,11 @@ section: blog
 ---
 <article class="post wrap">
   <a class="back-link" href="/blog/">← Blog</a>
-  <header class="post-header"><time datetime="{{ page.date | isoDate }}">{{ page.date | dateLabel }}</time><h1>{{ title }}</h1><p class="post-description">{{ description }}</p></header>
+  <header class="post-header">
+    <time datetime="{{ page.date | isoDate }}">{{ page.date | dateLabel }}</time>
+    <h1>{{ title }}</h1>
+    {% if sourceUrl %}<a class="post-source" href="{{ sourceUrl }}">Originally published on LinkedIn ↗</a>{% elif description %}<p class="post-description">{{ description }}</p>{% endif %}
+  </header>
+  {% if cover %}<figure class="post-cover"><img src="{{ cover }}" alt="{{ coverAlt }}" decoding="async">{% if coverCaption %}<figcaption>{{ coverCaption }}</figcaption>{% endif %}</figure>{% endif %}
   <div class="prose">{{ content | safe }}</div>
 </article>

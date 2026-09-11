@@ -2,40 +2,41 @@
   {
     "company": "Dcycle",
     "dates": "2025 — Now",
-    "description": "Advisor. Strategy, operations and applied AI."
+    "description": "Advisor"
   },
   {
     "company": "Reby",
     "dates": "2020 — 2024",
-    "description": "COO. Led shared mobility operations across Spain and Italy."
+    "description": "COO in charge of PE exit"
   },
   {
     "company": "Badi",
     "dates": "2019 — 2020",
-    "description": "VP of Homes. Built and launched a new property management business."
+    "description": "VP of Homes, launching a new category"
   },
   {
     "company": "Hostmaker",
     "dates": "2016 — 2019",
-    "description": "General Manager. Led the business in Spain and Portugal."
+    "description": "General Manager for Spain and Portugal"
   },
   {
     "company": "Airbnb",
     "dates": "2014 — 2016",
-    "description": "Regional Market Manager. Grew the Spanish market."
+    "description": "Spain’s regional market manager"
   },
   {
     "company": "Fever",
     "dates": "2013 — 2014",
-    "description": "COO. Built the team and launched new markets."
+    "description": "COO in charge of jumpstarting the company"
   },
   {
     "company": "Inter-American Development Bank",
-    "dates": "2012 — 2013"
+    "dates": "2012 — 2013",
+    "description": "VC for LatAm"
   },
   {
     "company": "Amazon",
     "dates": "2011 — 2012",
-    "description": "Launched amazon.es"
+    "description": "Launching Amazon.es"
   }
 ]

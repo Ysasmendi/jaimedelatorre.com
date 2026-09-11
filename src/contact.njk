@@ -7,6 +7,11 @@ permalink: /contact/
 ---
 <section class="text-page wrap">
   <h1>Contact</h1>
-  <a class="email-link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+  <div class="email-actions">
+    <a class="email-link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    <button class="copy-email" type="button" data-email="{{ site.email }}" hidden>Copy email</button>
+  </div>
+  <p class="copy-status" role="status" aria-live="polite"></p>
   <div class="social-links"><a href="{{ site.linkedin }}">LinkedIn <span aria-hidden="true">↗</span></a><a href="{{ site.twitter }}">Twitter · @ysasmendi <span aria-hidden="true">↗</span></a></div>
 </section>
+<script src="/assets/contact.js" defer></script>

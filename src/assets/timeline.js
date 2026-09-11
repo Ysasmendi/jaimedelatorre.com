@@ -22,11 +22,12 @@ if (timeline) {
     const boxes = rows.map(row => row.getBoundingClientRect());
     const centers = boxes.map(box => box.top + 28);
     const viewport = timeline.getBoundingClientRect();
-    const readingLine = viewport.top + timeline.clientHeight * 0.42;
+    const pageScroll = getComputedStyle(timeline).overflowY === 'visible';
+    const readingLine = pageScroll ? innerHeight * 0.42 : viewport.top + timeline.clientHeight * 0.42;
     let active = centers.reduce((best, y, index) =>
       Math.abs(y - readingLine) < Math.abs(centers[best] - readingLine) ? index : best, 0);
-    if (timeline.scrollTop < 4) active = 0;
-    else if (timeline.scrollTop + timeline.clientHeight >= timeline.scrollHeight - 4) active = rows.length - 1;
+    if (!pageScroll && timeline.scrollTop < 4) active = 0;
+    else if (!pageScroll && timeline.scrollTop + timeline.clientHeight >= timeline.scrollHeight - 4) active = rows.length - 1;
 
     let lens = centers[active];
     if (focused >= 0 || selected >= 0) {
@@ -80,6 +81,7 @@ if (timeline) {
     if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) resumeReading();
   });
   timeline.addEventListener('scroll', () => { pointerY = null; schedule(); }, { passive: true });
+  addEventListener('scroll', () => { pointerY = null; schedule(); }, { passive: true });
   addEventListener('resize', schedule);
   reduceMotion.addEventListener('change', schedule);
   render();

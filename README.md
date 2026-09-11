@@ -43,7 +43,7 @@ Open http://localhost:8080. `npm run build` generates `_site/`.
 
 ## Hosting
 
-GitHub Pages uses `.github/workflows/pages.yml`. The custom domain is `jaimedelatorre.com`. Pages must be enabled and DNS configured before the website is live.
+GitHub Pages publishes `main` through `.github/workflows/pages.yml`. The website is live at `https://jaimedelatorre.com`, with HTTPS enforced and `www` redirected to the apex domain. DNS is managed in Squarespace; preserve the separate Proton Mail records when changing website records.
 
 | Host | Type | Value |
 | --- | --- | --- |
@@ -59,6 +59,10 @@ Inter is self-hosted under the included SIL Open Font License. Portrait supplied
 
 Hobby pictograms use Tabler Icons (MIT; license in `src/assets/icons/LICENSE.txt`), plus custom padel, kitesurfing, analog watch, scuba mask and tank, and DJ-with-headphones pictograms. Edit labels and order in `src/_data/hobbies.json`. Article pictograms are custom SVGs in `src/_includes/blog-icons/`, selected through the post's `icon` field.
 
-The home page stays within the viewport; only the chronology scrolls. Other pages retain normal document scrolling. The displayed portrait is `src/assets/jaime-jtyy.png`, edited to soften shirt wrinkles and change the embroidery to “J.T.Y.Y.”. The supplied original is retained as `src/assets/jaime.jpg`.
+The home page stays within the viewport; only the chronology scrolls. On screens up to 1000px wide and 600px high, the home page scrolls normally so all experience remains reachable. The blog index and individual articles scroll beneath the persistent site header. Contact uses normal document scrolling and offers a keyboard-accessible copy-email button with success and failure feedback.
+
+The portrait uses `jaime-desktop.webp` (1024 × 1536) and `jaime-mobile.webp` (320 × 480, selected at widths up to 680px). Both preserve the edited portrait and mobile framing. The edited source `src/assets/jaime-jtyy.png` and supplied original `src/assets/jaime.jpg` remain available. The shirt embroidery reads “J.T.Y.Y.”.
+
+Default social previews use `src/assets/social-card.png` (1200 × 630), designed in `scripts/social-card.html`. To regenerate it, open that HTML file in a browser at 1200 × 630, wait for fonts and images to load, and save a viewport screenshot to the PNG path. Article previews keep their own cover images; Open Graph and Twitter metadata use absolute HTTPS image URLs.
 
 D-DIN is self-hosted for the header under its SIL Open Font License (`src/assets/fonts/d-din/`). The ChatGPT/OpenAI hobby icon comes from Simple Icons; source and trademark attribution are in `src/assets/icons/OPENAI.txt`.

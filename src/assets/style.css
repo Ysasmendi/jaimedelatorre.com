@@ -27,9 +27,13 @@ h1, h2 { font-weight: 500; letter-spacing: -.035em; }
 .home-page { height: 100svh; overflow: hidden; display: flex; flex-direction: column; }
 .home-page .site-header { flex-shrink: 0; }
 .home-page main { flex: 1; min-height: 0; }
+.blog-page { height: 100svh; overflow: hidden; display: flex; flex-direction: column; }
+.blog-page .site-header { flex-shrink: 0; }
+.blog-page main { flex: 1; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; scroll-behavior: smooth; }
+.blog-page main:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .about-layout { height: 100%; display: grid; grid-template-columns: minmax(250px, .8fr) minmax(0, 1.2fr); grid-template-rows: minmax(0, 1fr); gap: clamp(50px, 7vw, 110px); padding-block: 24px 28px; }
 .portrait { min-height: 0; display: flex; flex-direction: column; align-items: start; }
-.portrait-image { width: 100%; flex: 1; min-height: 0; }
+.portrait-image { display: block; width: 100%; flex: 1; min-height: 0; }
 .portrait img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center top; }
 .portrait .hobbies { width: 100%; flex-shrink: 0; }
 .experience { min-height: 0; display: flex; flex-direction: column; }
@@ -88,6 +92,12 @@ h1, h2 { font-weight: 500; letter-spacing: -.035em; }
 .text-page h1 { font-size: 32px; line-height: 1.25; margin-bottom: 34px; }
 .empty-note { color: var(--muted); }
 .email-link { display: inline-block; font-size: clamp(17px, 2.4vw, 26px); letter-spacing: -.035em; color: var(--accent); border-bottom: 1px solid #acbcf2; overflow-wrap: anywhere; }
+.email-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.copy-email { min-height: 44px; padding: 8px 16px; border: 1px solid #acbcf2; border-radius: 6px; color: var(--accent); background: transparent; font: inherit; font-size: 14px; cursor: pointer; }
+.copy-email:hover { background: #e6ecfc; }
+.copy-email:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.copy-email:disabled { opacity: .6; cursor: wait; }
+.copy-status { min-height: 1.5em; margin-top: 8px; color: var(--muted); font-size: 13px; }
 .social-links { display: flex; gap: 28px; margin-top: 26px; font-size: 14px; color: var(--muted); }
 .social-links span { margin-left: 5px; }
 .article-list { max-width: 740px; }
@@ -168,8 +178,20 @@ h1, h2 { font-weight: 500; letter-spacing: -.035em; }
   .text-page h1 { font-size: 28px; }
   .post { padding-top: 30px; }
 }
+@media (max-height: 600px) and (max-width: 1000px) {
+  .home-page { height: auto; min-height: 100svh; overflow: visible; }
+  .home-page main { flex: none; }
+  .about-layout { height: auto; grid-template-rows: auto auto; }
+  .portrait { container-type: normal; height: auto; align-self: start; }
+  .career-scroll { flex: none; }
+  .career-list { flex: none; width: 100%; overflow: visible; }
+  .reading-track, .career-scroll::after, .scroll-hint { display: none; }
+}
+@media (max-height: 600px) and (min-width: 681px) and (max-width: 1000px) {
+  .portrait-image { width: min(240px, calc(100vw * .35 - 36px)); }
+}
 @media (prefers-reduced-motion: reduce) {
-  html, .career-list { scroll-behavior: auto; }
+  html, .career-list, .blog-page main { scroll-behavior: auto; }
   .timeline-label { transform: none; }
   .timeline-label, .timeline-dot, .career-item h2 { transition: none; }
 }

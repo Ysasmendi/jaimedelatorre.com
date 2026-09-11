@@ -12,12 +12,17 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:locale" content="{% if lang == 'es' %}es_ES{% else %}en_GB{% endif %}">
   {% if ogType == 'article' %}<meta property="article:published_time" content="{{ page.date | isoDate }}">{% endif %}
-  {% if cover %}<meta property="og:image" content="{{ site.url }}{{ cover }}">{% endif %}
+  <meta property="og:image" content="{{ site.url }}{{ cover or '/assets/social-card.png' }}">
+  <meta property="og:image:alt" content="{{ coverAlt or site.name }}">
+  {% if not cover %}<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">{% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ site.url }}{{ cover or '/assets/social-card.png' }}">
+  <meta name="twitter:image:alt" content="{{ coverAlt or site.name }}">
   <meta name="theme-color" content="#f3f6fc">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body{% if section == 'about' %} class="home-page"{% endif %}>
+<body{% if section == 'about' %} class="home-page"{% elif section == 'blog' %} class="blog-page"{% endif %}>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header wrap">
     <a class="wordmark" href="/">Jaime de la Torre de Ysasi-Ysasmendi</a>
@@ -27,6 +32,6 @@
       <a href="/contact/" {% if section == 'contact' %}aria-current="page"{% endif %}>Contact</a>
     </nav>
   </header>
-  <main id="content">{{ content | safe }}</main>
+  <main id="content"{% if section == 'blog' %} tabindex="0" aria-label="Blog content"{% endif %}>{{ content | safe }}</main>
 </body>
 </html>

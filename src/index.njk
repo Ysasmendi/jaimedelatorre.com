@@ -4,7 +4,10 @@ section: about
 ---
 <div class="about-layout wrap">
   <aside class="portrait">
-    <div class="portrait-image"><img src="/assets/jaime-jtyy.png" alt="Jaime de la Torre de Ysasi-Ysasmendi" width="1024" height="1536" fetchpriority="high"></div>
+    <picture class="portrait-image">
+      <source media="(max-width: 680px)" srcset="/assets/jaime-mobile.webp" type="image/webp">
+      <img src="/assets/jaime-desktop.webp" alt="Jaime de la Torre de Ysasi-Ysasmendi" width="1024" height="1536" fetchpriority="high">
+    </picture>
     <ul class="hobbies" aria-label="Outside work">
       {% for hobby in hobbies %}
       <li>

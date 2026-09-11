@@ -16,6 +16,10 @@
     "icon": "book"
   },
   {
+    "label": "Flying",
+    "icon": "airplane"
+  },
+  {
     "label": "Cinema",
     "icon": "movie"
   },

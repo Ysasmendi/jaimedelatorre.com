@@ -4,7 +4,7 @@ section: about
 ---
 <div class="about-layout wrap">
   <aside class="portrait">
-    <img src="/assets/jaime.jpg" alt="Jaime de la Torre de Ysasi-Ysasmendi" width="1999" height="2999" fetchpriority="high">
+    <div class="portrait-image"><img src="/assets/jaime-jtyy.png" alt="Jaime de la Torre de Ysasi-Ysasmendi" width="1024" height="1536" fetchpriority="high"></div>
     <ul class="hobbies" aria-label="Outside work">
       {% for hobby in hobbies %}
       <li>
@@ -20,9 +20,11 @@ section: about
     <h1 class="visually-hidden">{{ site.name }}</h1>
     <div class="intro">
       <p class="intro-heading">I scale things from <span>0</span> to <span>∞</span>.</p>
-      <p class="intro-detail">AI enthusiast.</p>
+      <p class="intro-detail">Crisis fixer. Process owner. Sparring partner. Tireless negotiator. Devil’s advocate... List continues.</p>
+      <div class="intro-actions"><button class="bio-open" type="button" aria-haspopup="dialog" aria-controls="about-bio">More about me ↗</button></div>
     </div>
-    <ol class="career-list">
+    <div class="career-scroll">
+    <ol class="career-list" aria-label="Career timeline">
       {% for job in career %}
       <li class="career-item" id="career-{{ loop.index }}">
         <a class="timeline-year" href="#career-{{ loop.index }}" aria-label="{{ job.company }}, {{ job.dates }}">
@@ -36,6 +38,16 @@ section: about
       </li>
       {% endfor %}
     </ol>
+    <div class="reading-track" aria-hidden="true"><span class="reading-fill"></span><span class="reading-dot"></span></div>
+    <span class="scroll-hint" aria-hidden="true">More experience ↓</span>
+    </div>
   </section>
 </div>
+<dialog id="about-bio" class="about-dialog" aria-labelledby="bio-title">
+  <form method="dialog"><button class="bio-close" aria-label="Close biography" autofocus>×</button></form>
+  <h2 id="bio-title">I make things happen.</h2>
+  <p>High-agency, detail-oriented, AI superuser, fast-learner professional with emphasis on delivery and execution. Obsessed with customers and quality. Blitzscaler at heart. Strategy nut.</p>
+  <p>I take small things and make them big, quickly and efficiently. I also take decisions and make myself accountable for their outcome.</p>
+</dialog>
 <script src="/assets/timeline.js" defer></script>
+<script src="/assets/about.js" defer></script>

@@ -6,7 +6,9 @@ Personal website for Jaime de la Torre. Built with Eleventy and prepared for Git
 
 - `src/_data/career.json`: companies, years and one-line descriptions.
 - `src/_data/site.json`: email, social links and metadata.
-- `src/index.njk`: portrait and experience.
+- `src/index.njk`: portrait, introduction, expandable biography and experience.
+- `src/assets/timeline.js`: magnification and active year within the independently scrolling chronology.
+- `src/assets/about.js`: biography dialog.
 - `src/blog.njk`: blog index.
 - `src/contact.njk`: email and social links.
 - `src/assets/style.css`: layout and typography.
@@ -55,4 +57,8 @@ The `contact@jaimedelatorre.com` mailbox is configured separately. The site uses
 
 Inter is self-hosted under the included SIL Open Font License. Portrait supplied by Jaime de la Torre. No analytics, tracking scripts or third-party runtime requests.
 
-Hobby pictograms use Tabler Icons (MIT; license in `src/assets/icons/LICENSE.txt`), plus custom padel, kitesurfing, analog watch, scuba tank and DJ controller pictograms. Edit labels and order in `src/_data/hobbies.json`.
+Hobby pictograms use Tabler Icons (MIT; license in `src/assets/icons/LICENSE.txt`), plus custom padel, kitesurfing, analog watch, scuba mask and tank, and DJ-with-headphones pictograms. Edit labels and order in `src/_data/hobbies.json`. Article pictograms are custom SVGs in `src/_includes/blog-icons/`, selected through the post's `icon` field.
+
+The home page stays within the viewport; only the chronology scrolls. Other pages retain normal document scrolling. The displayed portrait is `src/assets/jaime-jtyy.png`, edited to soften shirt wrinkles and change the embroidery to “J.T.Y.Y.”. The supplied original is retained as `src/assets/jaime.jpg`.
+
+D-DIN is self-hosted for the header under its SIL Open Font License (`src/assets/fonts/d-din/`). The ChatGPT/OpenAI hobby icon comes from Simple Icons; source and trademark attribution are in `src/assets/icons/OPENAI.txt`.

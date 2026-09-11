@@ -12,13 +12,21 @@ if (timeline) {
 
   function render() {
     frame = 0;
+    const scrollRange = Math.max(0, timeline.scrollHeight - timeline.clientHeight);
+    const progress = scrollRange ? Math.max(0, Math.min(1, timeline.scrollTop / scrollRange)) : 1;
+    const container = timeline.closest('.career-scroll');
+    container.style.setProperty('--reading-progress', `${progress * 100}%`);
+    container.style.setProperty('--reading-ratio', progress);
+    container.classList.toggle('is-at-end', scrollRange - timeline.scrollTop < 4);
+    container.classList.toggle('is-static', scrollRange < 4);
     const boxes = rows.map(row => row.getBoundingClientRect());
     const centers = boxes.map(box => box.top + 28);
-    const readingLine = innerHeight * 0.42;
+    const viewport = timeline.getBoundingClientRect();
+    const readingLine = viewport.top + timeline.clientHeight * 0.42;
     let active = centers.reduce((best, y, index) =>
       Math.abs(y - readingLine) < Math.abs(centers[best] - readingLine) ? index : best, 0);
-    if (scrollY < 4) active = 0;
-    else if (scrollY + innerHeight >= document.documentElement.scrollHeight - 4) active = rows.length - 1;
+    if (timeline.scrollTop < 4) active = 0;
+    else if (timeline.scrollTop + timeline.clientHeight >= timeline.scrollHeight - 4) active = rows.length - 1;
 
     let lens = centers[active];
     if (focused >= 0 || selected >= 0) {
@@ -71,7 +79,7 @@ if (timeline) {
   addEventListener('keydown', event => {
     if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) resumeReading();
   });
-  addEventListener('scroll', () => { pointerY = null; schedule(); }, { passive: true });
+  timeline.addEventListener('scroll', () => { pointerY = null; schedule(); }, { passive: true });
   addEventListener('resize', schedule);
   reduceMotion.addEventListener('change', schedule);
   render();

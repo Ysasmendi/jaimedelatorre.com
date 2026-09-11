@@ -10,7 +10,10 @@ permalink: /blog/
   {% if collections.articles.length %}
   <div class="article-list">
     {% for post in collections.articles %}
-    <a class="article-row" href="{{ post.url }}"><time datetime="{{ post.date | isoDate }}">{{ post.date | dateLabel }}</time><h2>{{ post.data.title }}</h2><p>{{ post.data.description }}</p></a>
+    <a class="article-row" href="{{ post.url }}">
+      <span class="article-icon" aria-hidden="true">{% include "blog-icons/" + (post.data.icon or 'speech') + ".svg" %}</span>
+      <div><time datetime="{{ post.date | isoDate }}">{{ post.date | dateLabel }}</time><h2>{{ post.data.title }}</h2><p>{{ post.data.description }}</p></div>
+    </a>
     {% endfor %}
   </div>
   {% else %}

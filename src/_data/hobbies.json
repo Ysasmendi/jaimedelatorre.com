@@ -38,5 +38,9 @@
   {
     "label": "Watch collecting",
     "icon": "analog-watch"
+  },
+  {
+    "label": "AI enthusiast",
+    "icon": "chatgpt"
   }
 ]

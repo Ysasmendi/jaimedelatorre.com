@@ -17,7 +17,7 @@
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body>
+<body{% if section == 'about' %} class="home-page"{% endif %}>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header wrap">
     <a class="wordmark" href="/">Jaime de la Torre de Ysasi-Ysasmendi</a>

@@ -1,0 +1,13 @@
+{
+  "name": "jaimedelatorre-com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --port=8080"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "engines": { "node": ">=20" }
+}

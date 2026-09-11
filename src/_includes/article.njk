@@ -1,0 +1,11 @@
+---
+layout: base.njk
+ogType: article
+section: blog
+---
+<article class="post wrap">
+  <a class="text-link back-link" href="/blog/">← Todos los artículos</a>
+  <header class="post-header"><p class="eyebrow"><time datetime="{{ page.date | isoDate }}">{{ page.date | dateLabel }}</time></p><h1>{{ title }}</h1><p class="post-description">{{ description }}</p><p class="post-author">Jaime de la Torre</p></header>
+  <div class="prose">{{ content | safe }}</div>
+  <footer class="post-footer"><a class="text-link" href="mailto:{{ site.email }}">Seguimos la conversación por correo ↗</a></footer>
+</article>

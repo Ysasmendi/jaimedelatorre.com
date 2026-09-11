@@ -9,7 +9,7 @@
   },
   {
     "label": "DJing",
-    "icon": "vinyl"
+    "icon": "dj-controller"
   },
   {
     "label": "Reading",
@@ -33,10 +33,10 @@
   },
   {
     "label": "Scuba diving",
-    "icon": "scuba-mask"
+    "icon": "scuba-tank"
   },
   {
     "label": "Watch collecting",
-    "icon": "device-watch"
+    "icon": "analog-watch"
   }
 ]

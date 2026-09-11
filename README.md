@@ -55,4 +55,4 @@ The `contact@jaimedelatorre.com` mailbox is configured separately. The site uses
 
 Inter is self-hosted under the included SIL Open Font License. Portrait supplied by Jaime de la Torre. No analytics, tracking scripts or third-party runtime requests.
 
-Hobby pictograms use Tabler Icons (MIT; license in `src/assets/icons/LICENSE.txt`), plus custom padel and kitesurfing pictograms. Edit labels and order in `src/_data/hobbies.json`.
+Hobby pictograms use Tabler Icons (MIT; license in `src/assets/icons/LICENSE.txt`), plus custom padel, kitesurfing, analog watch, scuba tank and DJ controller pictograms. Edit labels and order in `src/_data/hobbies.json`.

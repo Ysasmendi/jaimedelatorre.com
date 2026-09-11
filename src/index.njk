@@ -24,11 +24,18 @@ section: about
     </div>
     <ol class="career-list">
       {% for job in career %}
-      <li class="career-item">
-        <div class="career-heading"><h2>{{ job.company }}</h2><span class="career-date">{{ job.dates }}</span></div>
-        {% if job.description %}<p>{{ job.description }}</p>{% endif %}
+      <li class="career-item" id="career-{{ loop.index }}">
+        <a class="timeline-year" href="#career-{{ loop.index }}" aria-label="{{ job.company }}, {{ job.dates }}">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <span class="timeline-label"><span class="timeline-start">{{ job.dates.split(' — ')[0] }}</span><span class="timeline-end">— {{ job.dates.split(' — ')[1] }}</span></span>
+        </a>
+        <div class="career-content">
+          <div class="career-heading"><h2>{{ job.company }}</h2></div>
+          {% if job.description %}<p>{{ job.description }}</p>{% endif %}
+        </div>
       </li>
       {% endfor %}
     </ol>
   </section>
 </div>
+<script src="/assets/timeline.js" defer></script>

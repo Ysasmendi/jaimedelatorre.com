@@ -1,8 +1,9 @@
 ---
 title: "Llevar la contraria"
-icon: speech
+icon: contrary
 date: "2026-09-24"
 lang: "es"
+sourceUrl: "https://www.linkedin.com/posts/jaimedelatorre_me-viene-a-la-memoria-una-entrevista-que-share-7508821689112334336-wwnt/"
 description: "Una dinámica de grupo en L'Oréal, un agua termal y lo que cuesta llevar la contraria."
 ---
 
